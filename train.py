@@ -63,7 +63,8 @@ def createPerceptronThread(features,target,dataset,log):
 
                 pcptron_norm = Perceptron(max_iter=j, random_state=i, tol=k)
                 pcptron_norm = pcptron_norm.fit(feature_train_norm,target_train)
-                predict_norm = pcptron_std.predict(feature_test_norm)
+                predict_norm = pcptron_norm.predict(feature_test_norm)
+                
                 acc = accuracy_score(predict_norm,target_test)
                 if acc>maior_acc:
                     maior_acc=acc
@@ -75,8 +76,10 @@ def createPerceptronThread(features,target,dataset,log):
                     my_precision= precision_score(target_test,predict_norm)
                     my_matthews= matthews_corrcoef(target_test, predict_norm) 
                     tn,fp,fn,tp = confusion_matrix(target_test, predict_norm).ravel()
+                    
                 k+=0.05
-            j+=25
+                
+            j= j + 25
         
     message = "\n -----------------------"    
     message+= "\n Perceptron: "+dataset

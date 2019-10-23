@@ -91,16 +91,16 @@
  -----------------------
  Perceptron: banana.dat
  Melhor Resultado:
- Acurracy= 0.5971087366436204
- Precision= 0.5384615384615384
- Recall= 0.7068723702664796
- Matthews Coeficient= 0.21709947392860804
- True Negative: 446 True Positive:504
- False Negative: 209 False Positive: 432
- random_state= 7
+ Acurracy= 0.5977372721558768
+ Precision= 0.5488621151271754
+ Recall= 0.5750350631136045
+ Matthews Coeficient= 0.19053158272067613
+ True Negative: 541 True Positive:410
+ False Negative: 303 False Positive: 337
+ random_state= 8
  iterações= 25
  taxa de aprendizado= 0.05
- Com StandardScaler
+ Com Normalizer
 ################################
 
  -----------------------
@@ -117,16 +117,16 @@
  -----------------------
  Perceptron: bands.dat
  Melhor Resultado:
- Acurracy= 0.6909090909090909
- Precision= 0.7160493827160493
- Recall= 0.8405797101449275
- Matthews Coeficient= 0.30684461174119365
- True Negative: 18 True Positive:58
- False Negative: 11 False Positive: 23
- random_state= 1
+ Acurracy= 0.7090909090909091
+ Precision= 0.6907216494845361
+ Recall= 0.9710144927536232
+ Matthews Coeficient= 0.35843850037804853
+ True Negative: 11 True Positive:67
+ False Negative: 2 False Positive: 30
+ random_state= 29
  iterações= 25
  taxa de aprendizado= 0.05
- Com StandardScaler
+ Com Normalizer
 ################################
 
  -----------------------
@@ -169,16 +169,16 @@
  -----------------------
  Perceptron: bupa.dat
  Melhor Resultado:
- Acurracy= 0.7211538461538461
- Precision= 0.7540983606557377
- Recall= 0.7666666666666667
- Matthews Coeficient= 0.42713504225251664
- True Negative: 29 True Positive:46
- False Negative: 14 False Positive: 15
- random_state= 5
+ Acurracy= 0.7403846153846154
+ Precision= 0.72
+ Recall= 0.9
+ Matthews Coeficient= 0.465728269827605
+ True Negative: 23 True Positive:54
+ False Negative: 6 False Positive: 21
+ random_state= 36
  iterações= 25
  taxa de aprendizado= 0.1
- Com StandardScaler
+ Com Normalizer
 ################################
 
  -----------------------
@@ -300,15 +300,15 @@
  Perceptron: haberman.dat
  Melhor Resultado:
  Acurracy= 0.782608695652174
- Precision= 0.7
- Recall= 0.2916666666666667
- Matthews Coeficient= 0.34923226585484346
- True Negative: 65 True Positive:7
- False Negative: 17 False Positive: 3
- random_state= 31
+ Precision= 0.6666666666666666
+ Recall= 0.3333333333333333
+ Matthews Coeficient= 0.35791699479543954
+ True Negative: 64 True Positive:8
+ False Negative: 16 False Positive: 4
+ random_state= 2
  iterações= 25
  taxa de aprendizado= 0.05
- Com StandardScaler
+ Com Normalizer
 ################################
 
  -----------------------
@@ -385,8 +385,8 @@
  False Negative: 0 False Positive: 0
  random_state= 0
  iterações= 25
- taxa de aprendizado= 0.3
- Com StandardScaler
+ taxa de aprendizado= 0.05
+ Com Normalizer
 ################################
 
  -----------------------
@@ -585,16 +585,16 @@
  -----------------------
  Perceptron: ring.dat
  Melhor Resultado:
- Acurracy= 0.7148648648648649
- Precision= 0.6876923076923077
- Recall= 0.7975022301516503
- Matthews Coeficient= 0.4344666182536422
- True Negative: 693 True Positive:894
- False Negative: 227 False Positive: 406
- random_state= 27
+ Acurracy= 0.9653153153153153
+ Precision= 0.953125
+ Recall= 0.9794826048171276
+ Matthews Coeficient= 0.930968015998215
+ True Negative: 1045 True Positive:1098
+ False Negative: 23 False Positive: 54
+ random_state= 18
  iterações= 25
  taxa de aprendizado= 0.05
- Com StandardScaler
+ Com Normalizer
 ################################
 
  -----------------------
@@ -637,16 +637,16 @@
  -----------------------
  Perceptron: sonar.dat
  Melhor Resultado:
- Acurracy= 0.8253968253968254
- Precision= 0.8461538461538461
+ Acurracy= 0.8571428571428571
+ Precision= 0.9166666666666666
  Recall= 0.7586206896551724
- Matthews Coeficient= 0.6489198883550272
- True Negative: 30 True Positive:22
- False Negative: 7 False Positive: 4
- random_state= 20
+ Matthews Coeficient= 0.7182451612909736
+ True Negative: 32 True Positive:22
+ False Negative: 7 False Positive: 2
+ random_state= 24
  iterações= 25
  taxa de aprendizado= 0.1
- Com StandardScaler
+ Com Normalizer
 ################################
 
  -----------------------
@@ -663,16 +663,16 @@
  -----------------------
  Perceptron: spambase.dat
  Melhor Resultado:
- Acurracy= 0.9202898550724637
- Precision= 0.9109848484848485
- Recall= 0.8841911764705882
- Matthews Coeficient= 0.8324937812691967
- True Negative: 789 True Positive:481
- False Negative: 63 False Positive: 47
- random_state= 11
+ Acurracy= 0.9239130434782609
+ Precision= 0.8940754039497307
+ Recall= 0.9154411764705882
+ Matthews Coeficient= 0.8415180342788524
+ True Negative: 777 True Positive:498
+ False Negative: 46 False Positive: 59
+ random_state= 40
  iterações= 25
- taxa de aprendizado= 0.1
- Com StandardScaler
+ taxa de aprendizado= 0.05
+ Com Normalizer
 ################################
 
  -----------------------
@@ -716,15 +716,15 @@
  Perceptron: tic-tac-toe.dat
  Melhor Resultado:
  Acurracy= 0.6944444444444444
- Precision= 0.7032520325203252
- Recall= 0.9202127659574468
- Matthews Coeficient= 0.2565821185737604
- True Negative: 27 True Positive:173
- False Negative: 15 False Positive: 73
- random_state= 33
+ Precision= 0.6937984496124031
+ Recall= 0.9521276595744681
+ Matthews Coeficient= 0.252676910262321
+ True Negative: 21 True Positive:179
+ False Negative: 9 False Positive: 79
+ random_state= 45
  iterações= 25
- taxa de aprendizado= 0.1
- Com Normalizer
+ taxa de aprendizado= 0.05
+ Com StandardScaler
 ################################
 
  -----------------------
