@@ -1,0 +1,832 @@
+
+ -----------------------
+ Decision Tree: adult.dat
+ Melhor Resultado:
+ Acurracy= 0.8127810127515295
+ Precision= 0.6225402504472272
+ Recall= 0.6210588935157644
+ Matthews Coeficient= 0.49739950829988366
+ True Negative: 8939 True Positive:2088
+ False Negative: 1274 False Positive: 1266
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: adult.dat
+ Melhor Resultado:
+ Acurracy= 0.7950910297044299
+ Precision= 0.672189349112426
+ Recall= 0.33789411064842356
+ Matthews Coeficient= 0.37078791348634726
+ True Negative: 9651 True Positive:1136
+ False Negative: 2226 False Positive: 554
+ random_state= 48
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: appendicitis.dat
+ Melhor Resultado:
+ Acurracy= 0.84375
+ Precision= 0.6
+ Recall= 0.5
+ Matthews Coeficient= 0.4547940268270977
+ True Negative: 24 True Positive:3
+ False Negative: 3 False Positive: 2
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: appendicitis.dat
+ Melhor Resultado:
+ Acurracy= 0.875
+ Precision= 0.6666666666666666
+ Recall= 0.6666666666666666
+ Matthews Coeficient= 0.5897435897435898
+ True Negative: 24 True Positive:4
+ False Negative: 2 False Positive: 2
+ random_state= 1
+ iterações= 25
+ taxa de aprendizado= 0.35
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: australian.dat
+ Melhor Resultado:
+ Acurracy= 0.8269230769230769
+ Precision= 0.8352941176470589
+ Recall= 0.7634408602150538
+ Matthews Coeficient= 0.6490252391253457
+ True Negative: 101 True Positive:71
+ False Negative: 22 False Positive: 14
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: australian.dat
+ Melhor Resultado:
+ Acurracy= 0.8701923076923077
+ Precision= 0.9230769230769231
+ Recall= 0.7741935483870968
+ Matthews Coeficient= 0.7415158274104069
+ True Negative: 109 True Positive:72
+ False Negative: 21 False Positive: 6
+ random_state= 20
+ iterações= 25
+ taxa de aprendizado= 0.15000000000000002
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: banana.dat
+ Melhor Resultado:
+ Acurracy= 0.8705216844751729
+ Precision= 0.8545454545454545
+ Recall= 0.8569424964936886
+ Matthews Coeficient= 0.7382992598948888
+ True Negative: 774 True Positive:611
+ False Negative: 102 False Positive: 104
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: banana.dat
+ Melhor Resultado:
+ Acurracy= 0.5971087366436204
+ Precision= 0.5384615384615384
+ Recall= 0.7068723702664796
+ Matthews Coeficient= 0.21709947392860804
+ True Negative: 446 True Positive:504
+ False Negative: 209 False Positive: 432
+ random_state= 7
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: bands.dat
+ Melhor Resultado:
+ Acurracy= 0.7363636363636363
+ Precision= 0.7777777777777778
+ Recall= 0.8115942028985508
+ Matthews Coeficient= 0.42845156661756423
+ True Negative: 25 True Positive:56
+ False Negative: 13 False Positive: 16
+ Com Normalizer
+
+ -----------------------
+ Perceptron: bands.dat
+ Melhor Resultado:
+ Acurracy= 0.6909090909090909
+ Precision= 0.7160493827160493
+ Recall= 0.8405797101449275
+ Matthews Coeficient= 0.30684461174119365
+ True Negative: 18 True Positive:58
+ False Negative: 11 False Positive: 23
+ random_state= 1
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: breast.dat
+ Melhor Resultado:
+ Acurracy= 0.75
+ Precision= 0.6
+ Recall= 0.48
+ Matthews Coeficient= 0.36971129368463457
+ True Negative: 51 True Positive:12
+ False Negative: 13 False Positive: 8
+ Com Normalizer
+
+ -----------------------
+ Perceptron: breast.dat
+ Melhor Resultado:
+ Acurracy= 0.75
+ Precision= 0.5666666666666667
+ Recall= 0.68
+ Matthews Coeficient= 0.4386076240038184
+ True Negative: 46 True Positive:17
+ False Negative: 8 False Positive: 13
+ random_state= 17
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: bupa.dat
+ Melhor Resultado:
+ Acurracy= 0.6442307692307693
+ Precision= 0.6949152542372882
+ Recall= 0.6833333333333333
+ Matthews Coeficient= 0.27346663082326644
+ True Negative: 26 True Positive:41
+ False Negative: 19 False Positive: 18
+ Com Normalizer
+
+ -----------------------
+ Perceptron: bupa.dat
+ Melhor Resultado:
+ Acurracy= 0.7211538461538461
+ Precision= 0.7540983606557377
+ Recall= 0.7666666666666667
+ Matthews Coeficient= 0.42713504225251664
+ True Negative: 29 True Positive:46
+ False Negative: 14 False Positive: 15
+ random_state= 5
+ iterações= 25
+ taxa de aprendizado= 0.1
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: chess.dat
+ Melhor Resultado:
+ Acurracy= 1.0
+ Precision= 1.0
+ Recall= 1.0
+ Matthews Coeficient= 1.0
+ True Negative: 458 True Positive:501
+ False Negative: 0 False Positive: 0
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: chess.dat
+ Melhor Resultado:
+ Acurracy= 1.0
+ Precision= 1.0
+ Recall= 1.0
+ Matthews Coeficient= 1.0
+ True Negative: 458 True Positive:501
+ False Negative: 0 False Positive: 0
+ random_state= 0
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: coil2000.dat
+ Melhor Resultado:
+ Acurracy= 0.9077027485578555
+ Precision= 0.1619718309859155
+ Recall= 0.13068181818181818
+ Matthews Coeficient= 0.09708383760802632
+ True Negative: 2652 True Positive:23
+ False Negative: 153 False Positive: 119
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: coil2000.dat
+ Melhor Resultado:
+ Acurracy= 0.9402782490668476
+ Precision= 0.0
+ Recall= 0.0
+ Matthews Coeficient= 0.0
+ True Negative: 2771 True Positive:0
+ False Negative: 176 False Positive: 0
+ random_state= 0
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com Normalizer
+################################
+
+ -----------------------
+ Decision Tree: crx.dat
+ Melhor Resultado:
+ Acurracy= 0.8775510204081632
+ Precision= 0.8651685393258427
+ Recall= 0.8651685393258427
+ Matthews Coeficient= 0.7530190066155623
+ True Negative: 95 True Positive:77
+ False Negative: 12 False Positive: 12
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: crx.dat
+ Melhor Resultado:
+ Acurracy= 0.9030612244897959
+ Precision= 0.8723404255319149
+ Recall= 0.9213483146067416
+ Matthews Coeficient= 0.8064512136524278
+ True Negative: 95 True Positive:82
+ False Negative: 7 False Positive: 12
+ random_state= 13
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: german.dat
+ Melhor Resultado:
+ Acurracy= 0.7333333333333333
+ Precision= 0.5531914893617021
+ Recall= 0.5777777777777777
+ Matthews Coeficient= 0.37322418014592335
+ True Negative: 168 True Positive:52
+ False Negative: 38 False Positive: 42
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: german.dat
+ Melhor Resultado:
+ Acurracy= 0.7733333333333333
+ Precision= 0.6666666666666666
+ Recall= 0.4888888888888889
+ Matthews Coeficient= 0.4249382471675705
+ True Negative: 188 True Positive:44
+ False Negative: 46 False Positive: 22
+ random_state= 7
+ iterações= 25
+ taxa de aprendizado= 0.15000000000000002
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: haberman.dat
+ Melhor Resultado:
+ Acurracy= 0.6630434782608695
+ Precision= 0.3157894736842105
+ Recall= 0.25
+ Matthews Coeficient= 0.06380767574076535
+ True Negative: 55 True Positive:6
+ False Negative: 18 False Positive: 13
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: haberman.dat
+ Melhor Resultado:
+ Acurracy= 0.782608695652174
+ Precision= 0.7
+ Recall= 0.2916666666666667
+ Matthews Coeficient= 0.34923226585484346
+ True Negative: 65 True Positive:7
+ False Negative: 17 False Positive: 3
+ random_state= 31
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: heart.dat
+ Melhor Resultado:
+ Acurracy= 0.8148148148148148
+ Precision= 0.8181818181818182
+ Recall= 0.75
+ Matthews Coeficient= 0.6236348727784989
+ True Negative: 39 True Positive:27
+ False Negative: 9 False Positive: 6
+ Com Normalizer
+
+ -----------------------
+ Perceptron: heart.dat
+ Melhor Resultado:
+ Acurracy= 0.8641975308641975
+ Precision= 0.9629629629629629
+ Recall= 0.7222222222222222
+ Matthews Coeficient= 0.7378647873726218
+ True Negative: 44 True Positive:26
+ False Negative: 10 False Positive: 1
+ random_state= 28
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: hepatitis.dat
+ Melhor Resultado:
+ Acurracy= 0.875
+ Precision= 0.9473684210526315
+ Recall= 0.9
+ Matthews Coeficient= 0.5964809080634605
+ True Negative: 3 True Positive:18
+ False Negative: 2 False Positive: 1
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: hepatitis.dat
+ Melhor Resultado:
+ Acurracy= 0.9583333333333334
+ Precision= 1.0
+ Recall= 0.95
+ Matthews Coeficient= 0.8717797887081347
+ True Negative: 4 True Positive:19
+ False Negative: 1 False Positive: 0
+ random_state= 4
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: housevotes.dat
+ Melhor Resultado:
+ Acurracy= 0.9857142857142858
+ Precision= 1.0
+ Recall= 0.9696969696969697
+ Matthews Coeficient= 0.9716885449510839
+ True Negative: 37 True Positive:32
+ False Negative: 1 False Positive: 0
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: housevotes.dat
+ Melhor Resultado:
+ Acurracy= 1.0
+ Precision= 1.0
+ Recall= 1.0
+ Matthews Coeficient= 1.0
+ True Negative: 37 True Positive:33
+ False Negative: 0 False Positive: 0
+ random_state= 0
+ iterações= 25
+ taxa de aprendizado= 0.3
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: ionosphere.dat
+ Melhor Resultado:
+ Acurracy= 0.9056603773584906
+ Precision= 0.9393939393939394
+ Recall= 0.9117647058823529
+ Matthews Coeficient= 0.7979018950304947
+ True Negative: 34 True Positive:62
+ False Negative: 6 False Positive: 4
+ Com Normalizer
+
+ -----------------------
+ Perceptron: ionosphere.dat
+ Melhor Resultado:
+ Acurracy= 0.9056603773584906
+ Precision= 0.881578947368421
+ Recall= 0.9852941176470589
+ Matthews Coeficient= 0.7967880124728152
+ True Negative: 29 True Positive:67
+ False Negative: 1 False Positive: 9
+ random_state= 27
+ iterações= 25
+ taxa de aprendizado= 0.25
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: magic.dat
+ Melhor Resultado:
+ Acurracy= 0.8215913073957238
+ Precision= 0.7438302073050346
+ Recall= 0.751246261216351
+ Matthews Coeficient= 0.609602642579746
+ True Negative: 3181 True Positive:1507
+ False Negative: 499 False Positive: 519
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: magic.dat
+ Melhor Resultado:
+ Acurracy= 0.8045916579039607
+ Precision= 0.7443773998902907
+ Recall= 0.6764705882352942
+ Matthews Coeficient= 0.5637233968053755
+ True Negative: 3234 True Positive:1357
+ False Negative: 649 False Positive: 466
+ random_state= 26
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: mammographic.dat
+ Melhor Resultado:
+ Acurracy= 0.7630522088353414
+ Precision= 0.7924528301886793
+ Recall= 0.6942148760330579
+ Matthews Coeficient= 0.5279951098895275
+ True Negative: 106 True Positive:84
+ False Negative: 37 False Positive: 22
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: mammographic.dat
+ Melhor Resultado:
+ Acurracy= 0.8393574297188755
+ Precision= 0.8292682926829268
+ Recall= 0.8429752066115702
+ Matthews Coeficient= 0.6786936389066603
+ True Negative: 107 True Positive:102
+ False Negative: 19 False Positive: 21
+ random_state= 42
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: monk-2.dat
+ Melhor Resultado:
+ Acurracy= 1.0
+ Precision= 1.0
+ Recall= 1.0
+ Matthews Coeficient= 1.0
+ True Negative: 61 True Positive:69
+ False Negative: 0 False Positive: 0
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: monk-2.dat
+ Melhor Resultado:
+ Acurracy= 0.8615384615384616
+ Precision= 0.8311688311688312
+ Recall= 0.927536231884058
+ Matthews Coeficient= 0.7255388425382578
+ True Negative: 48 True Positive:64
+ False Negative: 5 False Positive: 13
+ random_state= 15
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: mushroom.dat
+ Melhor Resultado:
+ Acurracy= 1.0
+ Precision= 1.0
+ Recall= 1.0
+ Matthews Coeficient= 1.0
+ True Negative: 1047 True Positive:647
+ False Negative: 0 False Positive: 0
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: mushroom.dat
+ Melhor Resultado:
+ Acurracy= 0.9970484061393152
+ Precision= 0.9923312883435583
+ Recall= 1.0
+ Matthews Coeficient= 0.9937768167275421
+ True Negative: 1042 True Positive:647
+ False Negative: 0 False Positive: 5
+ random_state= 33
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: phoneme.dat
+ Melhor Resultado:
+ Acurracy= 0.8723797780517879
+ Precision= 0.7717171717171717
+ Recall= 0.8025210084033614
+ Matthews Coeficient= 0.6960697904622206
+ True Negative: 1033 True Positive:382
+ False Negative: 94 False Positive: 113
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: phoneme.dat
+ Melhor Resultado:
+ Acurracy= 0.7725030826140568
+ Precision= 0.6155507559395248
+ Recall= 0.5987394957983193
+ Matthews Coeficient= 0.44707002482412966
+ True Negative: 968 True Positive:285
+ False Negative: 191 False Positive: 178
+ random_state= 40
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: pima.dat
+ Melhor Resultado:
+ Acurracy= 0.70995670995671
+ Precision= 0.5875
+ Recall= 0.5802469135802469
+ Matthews Coeficient= 0.3612891676262949
+ True Negative: 117 True Positive:47
+ False Negative: 34 False Positive: 33
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: pima.dat
+ Melhor Resultado:
+ Acurracy= 0.7748917748917749
+ Precision= 0.6435643564356436
+ Recall= 0.8024691358024691
+ Matthews Coeficient= 0.5410712677987298
+ True Negative: 114 True Positive:65
+ False Negative: 16 False Positive: 36
+ random_state= 35
+ iterações= 25
+ taxa de aprendizado= 0.1
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: ring.dat
+ Melhor Resultado:
+ Acurracy= 0.8842342342342342
+ Precision= 0.8802816901408451
+ Recall= 0.8920606601248885
+ Matthews Coeficient= 0.7684849162097502
+ True Negative: 963 True Positive:1000
+ False Negative: 121 False Positive: 136
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: ring.dat
+ Melhor Resultado:
+ Acurracy= 0.7148648648648649
+ Precision= 0.6876923076923077
+ Recall= 0.7975022301516503
+ Matthews Coeficient= 0.4344666182536422
+ True Negative: 693 True Positive:894
+ False Negative: 227 False Positive: 406
+ random_state= 27
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: saheart.dat
+ Melhor Resultado:
+ Acurracy= 0.6618705035971223
+ Precision= 0.5106382978723404
+ Recall= 0.5
+ Matthews Coeficient= 0.24850755587461146
+ True Negative: 68 True Positive:24
+ False Negative: 24 False Positive: 23
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: saheart.dat
+ Melhor Resultado:
+ Acurracy= 0.7769784172661871
+ Precision= 0.673469387755102
+ Recall= 0.6875
+ Matthews Coeficient= 0.5092334435280892
+ True Negative: 75 True Positive:33
+ False Negative: 15 False Positive: 16
+ random_state= 27
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: sonar.dat
+ Melhor Resultado:
+ Acurracy= 0.7777777777777778
+ Precision= 0.7777777777777778
+ Recall= 0.7241379310344828
+ Matthews Coeficient= 0.5515973485146916
+ True Negative: 28 True Positive:21
+ False Negative: 8 False Positive: 6
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: sonar.dat
+ Melhor Resultado:
+ Acurracy= 0.8253968253968254
+ Precision= 0.8461538461538461
+ Recall= 0.7586206896551724
+ Matthews Coeficient= 0.6489198883550272
+ True Negative: 30 True Positive:22
+ False Negative: 7 False Positive: 4
+ random_state= 20
+ iterações= 25
+ taxa de aprendizado= 0.1
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: spambase.dat
+ Melhor Resultado:
+ Acurracy= 0.9173913043478261
+ Precision= 0.8894927536231884
+ Recall= 0.9025735294117647
+ Matthews Coeficient= 0.827542488143598
+ True Negative: 775 True Positive:491
+ False Negative: 53 False Positive: 61
+ Com Normalizer
+
+ -----------------------
+ Perceptron: spambase.dat
+ Melhor Resultado:
+ Acurracy= 0.9202898550724637
+ Precision= 0.9109848484848485
+ Recall= 0.8841911764705882
+ Matthews Coeficient= 0.8324937812691967
+ True Negative: 789 True Positive:481
+ False Negative: 63 False Positive: 47
+ random_state= 11
+ iterações= 25
+ taxa de aprendizado= 0.1
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: spectfheart.dat
+ Melhor Resultado:
+ Acurracy= 0.8271604938271605
+ Precision= 0.8571428571428571
+ Recall= 0.9375
+ Matthews Coeficient= 0.4151679182036791
+ True Negative: 7 True Positive:60
+ False Negative: 4 False Positive: 10
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: spectfheart.dat
+ Melhor Resultado:
+ Acurracy= 0.8395061728395061
+ Precision= 0.8695652173913043
+ Recall= 0.9375
+ Matthews Coeficient= 0.4677926071173606
+ True Negative: 8 True Positive:60
+ False Negative: 4 False Positive: 9
+ random_state= 14
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: tic-tac-toe.dat
+ Melhor Resultado:
+ Acurracy= 0.9722222222222222
+ Precision= 0.9639175257731959
+ Recall= 0.9946808510638298
+ Matthews Coeficient= 0.9388711561001508
+ True Negative: 93 True Positive:187
+ False Negative: 1 False Positive: 7
+ Com Normalizer
+
+ -----------------------
+ Perceptron: tic-tac-toe.dat
+ Melhor Resultado:
+ Acurracy= 0.6944444444444444
+ Precision= 0.7032520325203252
+ Recall= 0.9202127659574468
+ Matthews Coeficient= 0.2565821185737604
+ True Negative: 27 True Positive:173
+ False Negative: 15 False Positive: 73
+ random_state= 33
+ iterações= 25
+ taxa de aprendizado= 0.1
+ Com Normalizer
+################################
+
+ -----------------------
+ Decision Tree: titanic.dat
+ Melhor Resultado:
+ Acurracy= 0.7927382753403933
+ Precision= 0.9529411764705882
+ Recall= 0.37850467289719625
+ Matthews Coeficient= 0.5165594972431705
+ True Negative: 443 True Positive:81
+ False Negative: 133 False Positive: 4
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: titanic.dat
+ Melhor Resultado:
+ Acurracy= 0.7806354009077155
+ Precision= 0.7169811320754716
+ Recall= 0.5327102803738317
+ Matthews Coeficient= 0.47296970061515886
+ True Negative: 402 True Positive:114
+ False Negative: 100 False Positive: 45
+ random_state= 0
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: twonorm.dat
+ Melhor Resultado:
+ Acurracy= 0.8689189189189189
+ Precision= 0.8562717770034843
+ Recall= 0.8863841298467088
+ Matthews Coeficient= 0.7383017442317801
+ True Negative: 946 True Positive:983
+ False Negative: 126 False Positive: 165
+ Com Normalizer
+
+ -----------------------
+ Perceptron: twonorm.dat
+ Melhor Resultado:
+ Acurracy= 0.9702702702702702
+ Precision= 0.966041108132261
+ Recall= 0.9747520288548241
+ Matthews Coeficient= 0.9405791448386289
+ True Negative: 1073 True Positive:1081
+ False Negative: 28 False Positive: 38
+ random_state= 31
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: wdbc.dat
+ Melhor Resultado:
+ Acurracy= 0.9239766081871345
+ Precision= 0.8591549295774648
+ Recall= 0.953125
+ Matthews Coeficient= 0.8442731651188136
+ True Negative: 97 True Positive:61
+ False Negative: 3 False Positive: 10
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: wdbc.dat
+ Melhor Resultado:
+ Acurracy= 0.9707602339181286
+ Precision= 0.9836065573770492
+ Recall= 0.9375
+ Matthews Coeficient= 0.9376499884661174
+ True Negative: 106 True Positive:60
+ False Negative: 4 False Positive: 1
+ random_state= 6
+ iterações= 25
+ taxa de aprendizado= 0.2
+ Com StandardScaler
+################################
+
+ -----------------------
+ Decision Tree: wisconsin.dat
+ Melhor Resultado:
+ Acurracy= 0.9414634146341463
+ Precision= 0.9166666666666666
+ Recall= 0.9166666666666666
+ Matthews Coeficient= 0.8715538847117794
+ True Negative: 127 True Positive:66
+ False Negative: 6 False Positive: 6
+ Com StandardScaler
+
+ -----------------------
+ Perceptron: wisconsin.dat
+ Melhor Resultado:
+ Acurracy= 0.9853658536585366
+ Precision= 0.9726027397260274
+ Recall= 0.9861111111111112
+ Matthews Coeficient= 0.9680455287218136
+ True Negative: 131 True Positive:71
+ False Negative: 1 False Positive: 2
+ random_state= 7
+ iterações= 25
+ taxa de aprendizado= 0.05
+ Com StandardScaler
+################################
