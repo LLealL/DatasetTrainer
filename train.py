@@ -3,17 +3,16 @@ import warnings
 import threading
 import logging
 import logging.handlers
+import tqdm
+from models.mlptrainer import MLPTrainer
+from models.dttrainer import DTTrainer
+from models.preprocesser import PreProcesser
 from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import Normalizer
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import precision_score
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import matthews_corrcoef
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.linear_model import Perceptron
 from sklearn.impute import SimpleImputer
 from os import listdir
 from sklearn.tree.export import export_text
@@ -21,6 +20,41 @@ from sklearn.tree.export import export_text
 def warn(*arg,**kwargs):
     pass
 
+
+def createMLPThread(features,target,dataset,log):
+    preproc = PreProcesser(features,target)
+    ft_train_norm, ft_test_norm = preproc.getNormalized(state=0, size=0.7)
+    tg_train,tg_test = preproc.getTargets(state=0, size=0.7)
+    layers = [(10,),(20,),(50,),(10,10),(20,10),(50,10)]
+    epocas =[25,50,100]
+    rates = [0.01, 0.05]
+    message = "\nMLP :"+ dataset
+    addToLogger(log,message)
+    bar= tqdm.tqdm(total=10*len(layers)*len(epocas)*len(rates),desc=dataset+" MLP")
+    for i in range(10):
+        trainer= MLPTrainer(ft_train_norm,tg_train)
+        message ="\nrandom_state: "+str(i)
+       # layersBar = tqdm.tqdm(total=len(layers))
+        for layer in layers:
+            message+="\nlayers: "+str(layer)
+           # epocasBar = tqdm.tqdm(total = len(epocas))
+            for epoca in epocas:
+                message+="\nepochs: " + str(epoca)
+                for rate in rates:
+                    message+="\nlearning_rate: "+str(rate)
+                    trainer.train(layers=layer,rd_state=i,epochs=epoca,learn_rate=rate)
+                    predict = trainer.test(ft_test_norm)
+                    message+= "\nAccuracy: " +str(accuracy_score(tg_test,predict))
+                    bar.update(1)
+           #     epocasBar.update(1)
+          #  epocasBar.close()
+         #   layersBar.update(1)
+        #layersBar.close()
+        #bar.update(1)
+        addToLogger(log,message)
+    bar.close()
+    
+    
 
 def createPerceptronThread(features,target,dataset,log):
     maior_acc =0
@@ -31,25 +65,27 @@ def createPerceptronThread(features,target,dataset,log):
     my_recall=0
     my_precision=0
     my_matthews=0
-    for i in range(50):    
-        feature_train, feature_test, target_train, target_test = train_test_split(features,target,train_size=0.7, stratify=target,random_state=0)
-        scaler = StandardScaler()
-        feature_train_std = scaler.fit_transform(feature_train)
-        feature_test_std = scaler.fit_transform(feature_test)
+    bar = tqdm.tqdm(total=30)
+    for i in range(30):
+        preproc = PreProcesser(features,target)
+        ft_train_std , ft_test_std = preproc.getStdScaled(state=0,size=0.7)
+        ft_train_norm, ft_test_norm = preproc.getNormalized(state=0,size=0.7)
+        tg_train,tg_test = preproc.getTargets(state=0,size=0.7)
 
-        normalizer = Normalizer()
-        feature_train_norm =  normalizer.fit_transform(feature_train)
-        feature_test_norm = normalizer.fit_transform(feature_test)
-        
-        j=25
-        while j<500:
+        bar.update(1)
+        j=0
+        while j<100:
             k=0.05
+            j= j + 1
             while k<0.5:
-                pcptron_std = Perceptron(max_iter=j, random_state= i, tol=k)
-                pcptron_std = pcptron_std.fit(feature_train_std,target_train)
-                predict_std = pcptron_std.predict(feature_test_std)
-
-                acc = accuracy_score(predict_std, target_test)
+                trainer_std = PerceptronTrainer(ft_train_std,tg_train)
+                trainer_norm = PerceptronTrainer(ft_train_norm,tg_train)
+                trainer_std.train(its=j , rd_state=i)
+                trainer_norm.train(its=j , rd_State=i)
+                predict_std = trainer_std.test(ft_test_std)
+                predict_norm = trainer_std.test(ft_test_norm)
+                
+                acc = accuracy_score(target_test, predict_std)
                 if acc>maior_acc:
                     maior_acc=acc
                     melhor_taxa=k
@@ -60,12 +96,8 @@ def createPerceptronThread(features,target,dataset,log):
                     my_precision= precision_score(target_test,predict_std)
                     my_matthews= matthews_corrcoef(target_test, predict_std)  
                     tn,fp,fn,tp =confusion_matrix(target_test, predict_std).ravel()
-
-                pcptron_norm = Perceptron(max_iter=j, random_state=i, tol=k)
-                pcptron_norm = pcptron_norm.fit(feature_train_norm,target_train)
-                predict_norm = pcptron_norm.predict(feature_test_norm)
                 
-                acc = accuracy_score(predict_norm,target_test)
+                acc = accuracy_score(target_test,predict_norm)
                 if acc>maior_acc:
                     maior_acc=acc
                     melhor_taxa=k
@@ -75,12 +107,9 @@ def createPerceptronThread(features,target,dataset,log):
                     my_recall = recall_score(target_test, predict_norm)
                     my_precision= precision_score(target_test,predict_norm)
                     my_matthews= matthews_corrcoef(target_test, predict_norm) 
-                    tn,fp,fn,tp = confusion_matrix(target_test, predict_norm).ravel()
-                    
+                    tn,fp,fn,tp = confusion_matrix(target_test, predict_norm).ravel()    
                 k+=0.05
-                
-            j= j + 25
-        
+                   
     message = "\n -----------------------"    
     message+= "\n Perceptron: "+dataset
     message+= "\n Melhor Resultado:"
@@ -113,21 +142,21 @@ def createDTthread(features,target,dataset,log):
     my_precision=0
     my_matthews=0
     for i in range(50):
-        ft_train , ft_test, tg_train, tg_test = train_test_split(features,target,train_size=0.7, stratify=target, random_state=0)
+        preproc = PreProcesser(features,target)
+        ft_train_std , ft_test_std = preproc.getStdScaled(state=0,size=0.7)
 
-        scaler=  StandardScaler()
-        ft_train_std= scaler.fit_transform(ft_train)
-        ft_test_std= scaler.transform(ft_test)
+        ft_train_norm, ft_test_norm = preproc.getNormalized(state=0,size=0.7)
 
-        n = Normalizer()
-        ft_train_norm= n.fit_transform(ft_train)
-        ft_test_norm = n.transform(ft_test)
-
-        decision_tree_std = DecisionTreeClassifier(random_state=i)
-        decision_tree_std = decision_tree_std.fit(ft_train_std, tg_train)
-        prediction_std = decision_tree_std.predict(ft_test_std)
-
-        acc= accuracy_score(prediction_std,tg_test)
+        tg_train,tg_test = preproc.getTargets(state=0,size=0.7)
+        
+        trainer_std = DTTrainer(ft_train_std,tg_train)
+        trainer_norm = DTTrainer(ft_train_norm,tg_train)
+        trainer_std.train(rd_state=i)
+        trainer_norm.train(rd_state=i)
+        prediction_std = trainer_std.test(ft_test_std)
+        prediction_norm = trainer_norm.test(ft_test_norm)
+        
+        acc= accuracy_score(tg_test,prediction_std)
         if acc>maior_acc:
             maior_acc=acc
             maior_state=i
@@ -136,13 +165,8 @@ def createDTthread(features,target,dataset,log):
             my_precision= precision_score(tg_test,prediction_std)
             my_matthews= matthews_corrcoef(tg_test, prediction_std)  
             tn,fp,fn,tp =confusion_matrix(tg_test, prediction_std).ravel()
-            
-        
-        decision_tree_norm = DecisionTreeClassifier(random_state=i)
-        decision_tree_norm = decision_tree_norm.fit(ft_train_norm,tg_train)
-        prediction_norm = decision_tree_norm.predict(ft_test_norm)
-            
-        acc= accuracy_score(prediction_norm,tg_test)
+                        
+        acc= accuracy_score(tg_test_norm,prediction_norm)
         if acc>maior_acc:
             maior_acc=acc
             maior_state=i
@@ -179,14 +203,15 @@ def addignore(dataset):
 def readIgnores():
     f = open("trainIgnore.txt", "r")
     ignores = []
-    while True :
-        x=f.readline()
-        x= x.rstrip('\n')
-        if x is "":
-            break
+    lines = f.readlines()
+
+    for line in lines:
+        x = line.rstrip('\n')
         ignores.append(x)
+
     return ignores
 
+   
 def createLogger():
     my_logger = logging.getLogger('MyLogger')
     my_logger.setLevel(logging.DEBUG)
@@ -211,15 +236,14 @@ def addToLogger(Logger,message):
 warnings.warn=warn
 
 dir = 'datasets/'
-output = 'result.csv'
 
 names= []
 logger = createLogger()
 ignores = readIgnores()
 for file in listdir(dir):
-    print("preparing...",file)
+    print("\npreparing...",file)
     if file in ignores:
-        print("skipping ",file)
+        print("\nskipping ",file)
         continue
     names.clear()
     with open(dir+file, 'rt') as in_file:
@@ -239,13 +263,10 @@ for file in listdir(dir):
     
     features = data.iloc[:, 0:ultimaColuna]
     tags = data.iloc[:, -1]
+   # dtree= threading.Thread(target=createDTthread,args=(features,tags,file,logger)  
+   # mlpThread= threading.Thread(target=createMLPThread,args=(features,tags,file,logger))
 
-    ptron= threading.Thread(target=createPerceptronThread, args=(features,tags,file,logger))
-    dtree= threading.Thread(target=createDTthread,args=(features,tags,file,logger))
-    ptron.start()
-    dtree.start()
-    ptron.join() 
-    dtree.join()
+    createMLPThread(features,tags,file,logger)
     addignore(file)
     addToLogger(logger,"################################")
 
